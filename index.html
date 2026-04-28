@@ -1,0 +1,762 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Bir Olmak Mümkün · Mersin Dişhekimleri Odası Seçim Kampanyası</title>
+<meta name="description" content="Mersin Dişhekimleri Odası için bir grubun değil tüm üyelerinin evi olacak bir yönetim. Deneyim, birlik ve somut projelerle yeni bir dönem.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500;700;900&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+<style>
+:root{
+  --navy:#0B3D5C;
+  --navy-dark:#082B42;
+  --gold:#C9A961;
+  --gold-bright:#E0C084;
+  --cream:#F5EFE0;
+  --cream-soft:#FAF6EC;
+  --text:#1a1a1a;
+  --text-soft:#4a4a4a;
+  --text-mute:#888;
+  --white:#ffffff;
+}
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth}
+body{
+  font-family:'Inter',system-ui,-apple-system,sans-serif;
+  color:var(--text);
+  line-height:1.65;
+  background:var(--cream-soft);
+  -webkit-font-smoothing:antialiased;
+}
+h1,h2,h3,h4{font-family:'Playfair Display',serif;font-weight:700;line-height:1.15;color:var(--navy)}
+a{color:inherit;text-decoration:none}
+img{max-width:100%;display:block}
+.container{max-width:1180px;margin:0 auto;padding:0 24px}
+
+/* ===== NAV ===== */
+nav{
+  position:fixed;top:0;left:0;right:0;z-index:100;
+  background:rgba(11,61,92,0.96);
+  backdrop-filter:blur(8px);
+  border-bottom:1px solid rgba(201,169,97,0.25);
+}
+.nav-wrap{
+  display:flex;align-items:center;justify-content:space-between;
+  padding:14px 24px;max-width:1180px;margin:0 auto;
+}
+.brand{display:flex;align-items:center;gap:12px;color:var(--cream)}
+.brand-mark{
+  width:40px;height:40px;border-radius:50%;
+  background:linear-gradient(135deg,var(--gold) 0%,var(--gold-bright) 100%);
+  display:flex;align-items:center;justify-content:center;
+  color:var(--navy-dark);font-family:'Playfair Display',serif;font-weight:900;font-size:22px;
+  box-shadow:0 2px 8px rgba(0,0,0,0.2);
+}
+.brand-text{font-family:'Playfair Display',serif;font-weight:700;font-size:18px;letter-spacing:0.5px}
+.brand-sub{font-size:11px;color:var(--gold);letter-spacing:1.5px;text-transform:uppercase;margin-top:2px}
+.nav-links{display:flex;gap:28px;align-items:center}
+.nav-links a{color:var(--cream);font-size:14px;font-weight:500;opacity:0.85;transition:opacity .2s}
+.nav-links a:hover{opacity:1;color:var(--gold-bright)}
+.cta{
+  background:var(--gold);color:var(--navy-dark)!important;
+  padding:10px 20px;border-radius:999px;font-weight:600;
+  transition:all .25s;
+}
+.cta:hover{background:var(--gold-bright);transform:translateY(-1px)}
+.nav-toggle{display:none;background:none;border:none;color:var(--cream);font-size:24px;cursor:pointer}
+
+/* ===== HERO ===== */
+.hero{
+  min-height:100vh;
+  background:
+    radial-gradient(ellipse at top right,rgba(201,169,97,0.18) 0%,transparent 55%),
+    radial-gradient(ellipse at bottom left,rgba(201,169,97,0.1) 0%,transparent 50%),
+    linear-gradient(165deg,var(--navy) 0%,var(--navy-dark) 100%);
+  color:var(--cream);
+  display:flex;align-items:center;
+  position:relative;overflow:hidden;
+  padding:120px 0 80px;
+}
+.hero::before{
+  content:"";position:absolute;inset:0;
+  background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='60' height='60' viewBox='0 0 60 60'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cg fill='%23C9A961' fill-opacity='0.04'%3E%3Cpath d='M36 34v-4h-2v4h-4v2h4v4h2v-4h4v-2h-4zm0-30V0h-2v4h-4v2h4v4h2V6h4V4h-4zM6 34v-4H4v4H0v2h4v4h2v-4h4v-2H6zM6 4V0H4v4H0v2h4v4h2V6h4V4H6z'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E");
+  opacity:0.6;
+}
+.hero-content{position:relative;z-index:2;max-width:820px}
+.hero-eyebrow{
+  display:inline-block;
+  padding:6px 16px;
+  background:rgba(201,169,97,0.12);
+  border:1px solid rgba(201,169,97,0.35);
+  border-radius:999px;
+  color:var(--gold-bright);
+  font-size:12px;letter-spacing:2px;text-transform:uppercase;font-weight:600;
+  margin-bottom:28px;
+}
+.hero h1{
+  color:var(--cream);
+  font-size:clamp(52px,8vw,108px);
+  font-weight:900;line-height:0.98;
+  letter-spacing:-1.5px;
+  margin-bottom:28px;
+}
+.hero h1 span{color:var(--gold);font-style:italic}
+.hero-lead{
+  font-size:clamp(17px,2vw,21px);
+  line-height:1.6;color:rgba(245,239,224,0.85);font-weight:300;
+  max-width:600px;margin-bottom:40px;
+}
+.hero-buttons{display:flex;gap:14px;flex-wrap:wrap}
+.btn-primary,.btn-secondary{
+  padding:15px 30px;border-radius:999px;font-weight:600;font-size:15px;
+  display:inline-flex;align-items:center;gap:10px;cursor:pointer;border:none;
+  transition:all .25s;
+}
+.btn-primary{background:var(--gold);color:var(--navy-dark)}
+.btn-primary:hover{background:var(--gold-bright);transform:translateY(-2px);box-shadow:0 8px 24px rgba(201,169,97,0.3)}
+.btn-secondary{
+  background:transparent;color:var(--cream);
+  border:1.5px solid rgba(245,239,224,0.4);
+}
+.btn-secondary:hover{background:rgba(245,239,224,0.08);border-color:var(--gold)}
+
+.countdown-bar{
+  display:inline-flex;align-items:center;gap:18px;flex-wrap:wrap;
+  padding:18px 24px;margin-top:28px;margin-bottom:36px;
+  background:rgba(201,169,97,0.1);
+  border:1px solid rgba(201,169,97,0.35);
+  border-radius:14px;
+}
+.count-box{
+  display:flex;flex-direction:column;align-items:center;
+  min-width:62px;
+}
+.count-box strong{
+  font-family:'Playfair Display',serif;font-weight:900;
+  font-size:32px;color:var(--gold-bright);line-height:1;
+}
+.count-box em{
+  font-style:normal;font-size:11px;color:rgba(245,239,224,0.7);
+  text-transform:uppercase;letter-spacing:1.5px;margin-top:4px;
+}
+.count-label{
+  font-size:14px;color:rgba(245,239,224,0.75);
+  font-style:italic;padding-left:8px;
+  border-left:1px solid rgba(201,169,97,0.3);
+}
+@media (max-width:560px){
+  .count-label{border-left:none;padding-left:0;padding-top:8px;width:100%}
+}
+.hero-quote{
+  position:relative;z-index:2;
+  margin-top:60px;padding-top:40px;
+  border-top:1px solid rgba(201,169,97,0.2);
+  display:flex;gap:32px;flex-wrap:wrap;
+}
+.hero-quote p{
+  flex:1;min-width:260px;
+  color:rgba(245,239,224,0.75);
+  font-family:'Playfair Display',serif;font-style:italic;font-size:18px;
+}
+.hero-quote p::before{content:"“ ";color:var(--gold);font-size:24px}
+.hero-quote p::after{content:" ”";color:var(--gold);font-size:24px}
+
+/* ===== SECTIONS ===== */
+section{padding:110px 0}
+.section-head{max-width:700px;margin:0 auto 72px;text-align:center}
+.section-eyebrow{
+  display:inline-block;font-size:12px;letter-spacing:2.5px;text-transform:uppercase;
+  color:var(--gold);font-weight:600;margin-bottom:14px;
+}
+.section-title{font-size:clamp(36px,5vw,52px);margin-bottom:18px;letter-spacing:-0.5px}
+.section-sub{font-size:18px;color:var(--text-soft);line-height:1.6}
+
+/* ===== DEĞERLER (3 sütun) ===== */
+.values{background:var(--cream-soft)}
+.pillars{display:grid;grid-template-columns:repeat(3,1fr);gap:28px}
+.pillar{
+  background:var(--white);
+  padding:48px 36px;
+  border-radius:20px;
+  box-shadow:0 2px 12px rgba(11,61,92,0.06);
+  border:1px solid rgba(201,169,97,0.12);
+  transition:all .3s;
+  position:relative;overflow:hidden;
+}
+.pillar::before{
+  content:"";position:absolute;top:0;left:0;right:0;height:4px;
+  background:linear-gradient(90deg,var(--gold),var(--gold-bright));
+}
+.pillar:hover{transform:translateY(-4px);box-shadow:0 12px 28px rgba(11,61,92,0.1)}
+.pillar-num{
+  font-family:'Playfair Display',serif;
+  font-size:14px;color:var(--gold);font-weight:700;letter-spacing:2px;
+  text-transform:uppercase;margin-bottom:18px;
+}
+.pillar h3{font-size:28px;margin-bottom:14px}
+.pillar p{color:var(--text-soft);font-size:15.5px;line-height:1.7}
+
+/* ===== PROJELER ===== */
+.projects{background:linear-gradient(180deg,var(--cream-soft) 0%,var(--cream) 100%)}
+.project-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:24px}
+.project-card{
+  background:var(--white);
+  padding:42px 36px;border-radius:18px;
+  border:1px solid rgba(11,61,92,0.08);
+  display:flex;gap:24px;align-items:flex-start;
+  transition:all .3s;
+}
+.project-card:hover{border-color:var(--gold);box-shadow:0 8px 24px rgba(11,61,92,0.08)}
+.project-icon{
+  flex-shrink:0;
+  width:58px;height:58px;border-radius:14px;
+  background:linear-gradient(135deg,var(--navy) 0%,var(--navy-dark) 100%);
+  color:var(--gold);
+  display:flex;align-items:center;justify-content:center;
+  font-family:'Playfair Display',serif;font-size:22px;font-weight:700;
+}
+.project-card h3{font-size:22px;margin-bottom:10px;line-height:1.2}
+.project-card p{color:var(--text-soft);font-size:15px;line-height:1.65}
+
+/* ===== FİLMLER ===== */
+.films{background:var(--navy);color:var(--cream);position:relative;overflow:hidden}
+.films::before{
+  content:"";position:absolute;inset:0;
+  background:radial-gradient(ellipse at center,rgba(201,169,97,0.08) 0%,transparent 60%);
+}
+.films .section-title{color:var(--cream)}
+.films .section-sub{color:rgba(245,239,224,0.75)}
+.films .section-eyebrow{color:var(--gold-bright)}
+.film-grid{
+  display:grid;grid-template-columns:repeat(2,1fr);gap:24px;
+  position:relative;z-index:2;
+}
+.film-card{
+  background:rgba(245,239,224,0.04);
+  border:1px solid rgba(201,169,97,0.2);
+  border-radius:18px;overflow:hidden;
+  transition:all .3s;cursor:pointer;
+}
+.film-card:hover{background:rgba(245,239,224,0.07);border-color:var(--gold);transform:translateY(-3px)}
+.film-thumb{
+  aspect-ratio:16/9;
+  background:linear-gradient(135deg,var(--navy-dark) 0%,#051a28 100%);
+  position:relative;display:flex;align-items:center;justify-content:center;
+  border-bottom:1px solid rgba(201,169,97,0.15);
+}
+.film-thumb::before{
+  content:"";position:absolute;inset:0;
+  background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='40' height='40' viewBox='0 0 40 40'%3E%3Cpath d='M20 20c0-5.5-4.5-10-10-10s-10 4.5-10 10 4.5 10 10 10 10-4.5 10-10zm10 0c0 5.5-4.5 10-10 10s-10-4.5-10-10 4.5-10 10-10 10 4.5 10 10z' stroke='%23C9A961' stroke-opacity='0.05' fill='none'/%3E%3C/svg%3E");
+  opacity:0.4;
+}
+.play-icon{
+  width:64px;height:64px;border-radius:50%;
+  background:var(--gold);color:var(--navy-dark);
+  display:flex;align-items:center;justify-content:center;
+  font-size:22px;position:relative;z-index:2;
+  transition:all .3s;box-shadow:0 4px 16px rgba(0,0,0,0.3);
+}
+.film-card:hover .play-icon{transform:scale(1.08);background:var(--gold-bright)}
+.film-meta{
+  position:absolute;top:16px;right:16px;
+  background:rgba(11,61,92,0.8);color:var(--cream);
+  padding:6px 12px;border-radius:6px;font-size:12px;font-weight:500;
+  z-index:2;backdrop-filter:blur(4px);
+}
+.film-body{padding:28px}
+.film-label{
+  font-size:11px;letter-spacing:2px;text-transform:uppercase;
+  color:var(--gold-bright);font-weight:600;margin-bottom:10px;
+}
+.film-body h3{color:var(--cream);font-size:22px;margin-bottom:10px}
+.film-body p{color:rgba(245,239,224,0.75);font-size:14.5px;line-height:1.6}
+
+/* ===== MANIFESTO ===== */
+.manifesto{
+  background:var(--cream);
+  padding:130px 0;position:relative;overflow:hidden;
+}
+.manifesto::before{
+  content:"“";position:absolute;top:60px;left:40px;
+  font-family:'Playfair Display',serif;font-size:340px;line-height:1;
+  color:var(--gold);opacity:0.15;font-weight:900;
+}
+.manifesto-wrap{max-width:820px;margin:0 auto;position:relative;z-index:2;text-align:center}
+.manifesto h2{font-size:clamp(32px,4.5vw,48px);margin-bottom:44px}
+.manifesto-body{font-size:20px;line-height:1.7;color:var(--text-soft)}
+.manifesto-body p{margin-bottom:22px}
+.manifesto-body strong{color:var(--navy);font-weight:600}
+.manifesto-sig{
+  margin-top:60px;padding-top:36px;border-top:1px solid rgba(201,169,97,0.35);
+  font-family:'Playfair Display',serif;font-style:italic;font-size:18px;color:var(--navy);
+}
+
+/* ===== KATIL (FORM) ===== */
+.join{
+  background:linear-gradient(165deg,var(--navy) 0%,var(--navy-dark) 100%);
+  color:var(--cream);
+}
+.join .section-title{color:var(--cream)}
+.join .section-sub{color:rgba(245,239,224,0.75)}
+.join .section-eyebrow{color:var(--gold-bright)}
+.join-form{
+  max-width:560px;margin:0 auto;
+  background:rgba(245,239,224,0.04);
+  border:1px solid rgba(201,169,97,0.25);
+  padding:40px 38px;border-radius:20px;
+}
+.form-row{margin-bottom:18px}
+.form-row label{
+  display:block;font-size:13px;color:var(--gold-bright);
+  margin-bottom:7px;font-weight:500;letter-spacing:0.5px;
+}
+.form-row input,.form-row select,.form-row textarea{
+  width:100%;padding:13px 16px;
+  background:rgba(245,239,224,0.07);
+  border:1px solid rgba(201,169,97,0.25);
+  border-radius:10px;color:var(--cream);
+  font-family:inherit;font-size:15px;
+  transition:all .2s;
+}
+.form-row input:focus,.form-row select:focus,.form-row textarea:focus{
+  outline:none;border-color:var(--gold);background:rgba(245,239,224,0.1);
+}
+.form-row input::placeholder,.form-row textarea::placeholder{color:rgba(245,239,224,0.4)}
+.form-row textarea{resize:vertical;min-height:100px;font-family:inherit}
+.form-row select option{background:var(--navy);color:var(--cream)}
+.checkbox-row{
+  display:flex;gap:10px;align-items:flex-start;
+  font-size:14px;color:rgba(245,239,224,0.75);line-height:1.5;
+}
+.checkbox-row input{width:auto;margin-top:3px;flex-shrink:0}
+.form-submit{
+  width:100%;padding:15px;background:var(--gold);color:var(--navy-dark);
+  border:none;border-radius:10px;font-size:15px;font-weight:700;
+  cursor:pointer;margin-top:12px;transition:all .2s;letter-spacing:0.5px;
+}
+.form-submit:hover{background:var(--gold-bright);transform:translateY(-1px)}
+.form-success{
+  display:none;text-align:center;padding:32px 16px;color:var(--gold-bright);
+  font-size:17px;line-height:1.6;
+}
+.form-success.show{display:block}
+.form-success.show ~ *{display:none}
+
+/* ===== FOOTER ===== */
+footer{
+  background:var(--navy-dark);color:rgba(245,239,224,0.75);
+  padding:64px 0 28px;
+}
+.footer-grid{
+  display:grid;grid-template-columns:2fr 1fr 1fr;gap:42px;
+  padding-bottom:40px;border-bottom:1px solid rgba(201,169,97,0.15);
+}
+.footer-brand .brand-text{font-size:20px;color:var(--cream)}
+.footer-brand p{margin-top:14px;font-size:14.5px;line-height:1.6;max-width:360px}
+.footer-col h4{
+  color:var(--gold-bright);font-family:'Inter',sans-serif;font-weight:600;
+  font-size:13px;text-transform:uppercase;letter-spacing:1.5px;
+  margin-bottom:16px;
+}
+.footer-col a,.footer-col span{
+  display:block;color:rgba(245,239,224,0.7);font-size:14.5px;
+  margin-bottom:10px;transition:color .2s;
+}
+.footer-col a:hover{color:var(--gold-bright)}
+.footer-bottom{
+  margin-top:24px;display:flex;justify-content:space-between;
+  font-size:13px;color:rgba(245,239,224,0.5);flex-wrap:wrap;gap:12px;
+}
+.footer-bottom em{font-style:italic;color:var(--gold-bright)}
+
+/* ===== RESPONSIVE ===== */
+@media (max-width: 880px){
+  .pillars{grid-template-columns:1fr}
+  .project-grid{grid-template-columns:1fr}
+  .film-grid{grid-template-columns:1fr}
+  .footer-grid{grid-template-columns:1fr;gap:32px}
+  .nav-links{display:none}
+  .nav-toggle{display:block}
+  .nav-links.open{
+    display:flex;flex-direction:column;gap:16px;
+    position:absolute;top:100%;left:0;right:0;
+    background:var(--navy-dark);padding:24px;
+    border-bottom:1px solid rgba(201,169,97,0.2);
+  }
+  section{padding:84px 0}
+  .hero{padding:110px 0 60px;min-height:auto}
+  .manifesto::before{font-size:220px;top:20px;left:20px}
+  .hero-quote{flex-direction:column;gap:20px}
+}
+</style>
+</head>
+<body>
+
+<!-- NAV -->
+<nav>
+  <div class="nav-wrap">
+    <a href="#" class="brand">
+      <div class="brand-mark">1</div>
+      <div>
+        <div class="brand-text">Bir Olmak Mümkün</div>
+        <div class="brand-sub">Mersin Dişhekimleri Odası</div>
+      </div>
+    </a>
+    <div class="nav-links" id="navLinks">
+      <a href="#degerler">Değerlerimiz</a>
+      <a href="#projeler">Projeler</a>
+      <a href="#filmler">Filmler</a>
+      <a href="#manifesto">Manifesto</a>
+      <a href="#katil" class="cta">Yanımızda Dur</a>
+    </div>
+    <button class="nav-toggle" onclick="document.getElementById('navLinks').classList.toggle('open')">☰</button>
+  </div>
+</nav>
+
+<!-- HERO -->
+<section class="hero">
+  <div class="container hero-content">
+    <div class="hero-eyebrow">Mersin Dişhekimleri Odası · Seçim 10 Mayıs 2026 Pazar</div>
+    <h1>Bir olmak<br><span>mümkün.</span></h1>
+    <div class="countdown-bar" id="countdownBar">
+      <span class="count-box"><strong id="cdDays">–</strong><em>gün</em></span>
+      <span class="count-box"><strong id="cdHours">–</strong><em>saat</em></span>
+      <span class="count-box"><strong id="cdMins">–</strong><em>dakika</em></span>
+      <span class="count-label">sandığa kaldı</span>
+    </div>
+    <p class="hero-lead">
+      Odamızı bir grubun değil, <strong style="color:var(--cream)">tüm üyelerinin evi</strong> haline getirmek için yola çıktık.
+      Önce insan, ardından hekimiz. Farklılıklarımıza rağmen değil, farklılıklarımızla birlikte.
+    </p>
+    <div class="hero-buttons">
+      <a href="#katil" class="btn-primary">Yanımızda Dur →</a>
+      <a href="#manifesto" class="btn-secondary">Manifestomuzu Oku</a>
+    </div>
+
+    <div class="hero-quote">
+      <p>Mesleğimiz için tehlike, gruplara bölünmek ve kapıları kapatmaktır.</p>
+      <p>Biz bütünleşmeye geldik — bütünlemeye değil.</p>
+    </div>
+  </div>
+</section>
+
+<!-- DEĞERLER -->
+<section id="degerler" class="values">
+  <div class="container">
+    <div class="section-head">
+      <div class="section-eyebrow">Üç Temel Sütun</div>
+      <h2 class="section-title">Değerlerimiz</h2>
+      <p class="section-sub">
+        Bir kampanya, değerlerinin üstüne kurulur. Bizim de üç tane var: Birlik, deneyim, iş.
+        Ne söylersek söyleyelim, her cümlemiz bu üç sütunun birinin üstünde durur.
+      </p>
+    </div>
+
+    <div class="pillars">
+      <div class="pillar">
+        <div class="pillar-num">Sütun 01</div>
+        <h3>Birlik</h3>
+        <p>
+          Grubun değil, odanın yönetimi. Farklılıklarımız bir zenginlik;
+          onları silen değil, bir arada tutan bir yönetim anlayışı. Kapı, herkese açık.
+        </p>
+      </div>
+      <div class="pillar">
+        <div class="pillar-num">Sütun 02</div>
+        <h3>Deneyim</h3>
+        <p>
+          Kurumsal hafıza kaybolmasın. Sıfırdan değil, birikimden başlayarak.
+          Büyüklerimizin inşa ettiği yapıyı onların üzerine tepinmeden, büyüterek sürdürmek.
+        </p>
+      </div>
+      <div class="pillar">
+        <div class="pillar-num">Sütun 03</div>
+        <h3>İş</h3>
+        <p>
+          Söz değil, somut proje. Açık kapı yönetim, ücretsiz teknoloji, kurumsal eğitim
+          ve şeffaf mali rapor. Seçimden önce belli olan, seçimden sonra hayata geçecek bir program.
+        </p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- PROJELER -->
+<section id="projeler" class="projects">
+  <div class="container">
+    <div class="section-head">
+      <div class="section-eyebrow">Söz Değil, İş</div>
+      <h2 class="section-title">Projelerimiz</h2>
+      <p class="section-sub">
+        Seçimden önce net, seçimden sonra ilk ay başlar. Dört somut projeyle odayı
+        tüm üyelerinin hizmetine geri getireceğiz.
+      </p>
+    </div>
+
+    <div class="project-grid">
+      <div class="project-card">
+        <div class="project-icon">01</div>
+        <div>
+          <h3>Açık Kapı Yönetim</h3>
+          <p>Haftada bir sabit gün, her üyemiz yönetime doğrudan ulaşacak. Fiziksel olarak odada, çevrimiçi olarak ekranda. Yönetici, ulaşılabilir olmadığı ölçüde yönetimdir.</p>
+        </div>
+      </div>
+      <div class="project-card">
+        <div class="project-icon">02</div>
+        <div>
+          <h3>Ücretsiz Teknoloji</h3>
+          <p>Dijital radyografi, CAD-CAM, intraoral kamera ve benzeri teknolojiler, odanın kurumsal anlaşmalarıyla meslektaşlara ücretsiz ulaştırılacak. Teknoloji, bir grubun değil herkesin hakkı.</p>
+        </div>
+      </div>
+      <div class="project-card">
+        <div class="project-icon">03</div>
+        <div>
+          <h3>Kurumsal Akademi</h3>
+          <p>Yeni mezun hekim, gruplara değil odanın kurumsal yapısına emanet. Mentor, eğitim, hukuki destek ve ilk üç yılda muayenehane kurulumunda yanında bir kurum.</p>
+        </div>
+      </div>
+      <div class="project-card">
+        <div class="project-icon">04</div>
+        <div>
+          <h3>Şeffaf Mali Rapor</h3>
+          <p>Üç ayda bir, odanın her kuruşu üyeyle paylaşılır. Şeffaflık, güvenin önsözüdür. Yönetim, üyenin önünde şeffaf olmadan üyeye güven veremez.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- FİLMLER -->
+<section id="filmler" class="films">
+  <div class="container">
+    <div class="section-head">
+      <div class="section-eyebrow">Kampanya Filmleri</div>
+      <h2 class="section-title">Sözümüzü anlatıyoruz</h2>
+      <p class="section-sub">
+        Dört kısa film, bir yolculuk. Kapıyı açan manifestomuzdan, sandığa yaptığımız son çağrıya.
+      </p>
+    </div>
+
+    <div class="film-grid">
+      <div class="film-card">
+        <div class="film-thumb">
+          <div class="film-meta">80 sn</div>
+          <div class="play-icon">▶</div>
+        </div>
+        <div class="film-body">
+          <div class="film-label">Film 01 · Manifesto</div>
+          <h3>Kapı</h3>
+          <p>Yaşlı bir hekimin eli, bir kapının kilidine uzanır. Kapı açıldıkça içeri ışık dolar. Kampanyanın manifestosu.</p>
+        </div>
+      </div>
+
+      <div class="film-card">
+        <div class="film-thumb">
+          <div class="film-meta">110 sn</div>
+          <div class="play-icon">▶</div>
+        </div>
+        <div class="film-body">
+          <div class="film-label">Film 02 · Belgesel</div>
+          <h3>Sessiz Emek</h3>
+          <p>Kamunun özelden hizmet alımı projesinin temelini atan hekimlerden, yıllar sonrasına bir mektup.</p>
+        </div>
+      </div>
+
+      <div class="film-card">
+        <div class="film-thumb">
+          <div class="film-meta">75 sn</div>
+          <div class="play-icon">▶</div>
+        </div>
+        <div class="film-body">
+          <div class="film-label">Film 03 · Projeler</div>
+          <h3>Söz Değil, İş</h3>
+          <p>Dört proje, dört meslektaş, dört cümle. Vaatleri söze değil, programa dökmek.</p>
+        </div>
+      </div>
+
+      <div class="film-card">
+        <div class="film-thumb">
+          <div class="film-meta">55 sn</div>
+          <div class="play-icon">▶</div>
+        </div>
+        <div class="film-body">
+          <div class="film-label">Film 04 · Çağrı</div>
+          <h3>Sandık</h3>
+          <p>Klinik kapanıyor, ışıklar sönüyor. Ama bir kez daha birlikte olmamız gereken gün yarın. Son çağrı.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- MANIFESTO -->
+<section id="manifesto" class="manifesto">
+  <div class="container">
+    <div class="manifesto-wrap">
+      <div class="section-eyebrow">Manifestomuz</div>
+      <h2>Bir olmak mümkün.</h2>
+
+      <div class="manifesto-body">
+        <p><strong>Önce insan, ardından hekimiz.</strong> Farklılıklarımız, artı ve eksilerimiz daha sonra gelir. Bunların hepsine saygı duyarak, farklılıklarımızdan birbirimize öğretir ve öğreniriz.</p>
+
+        <p>Mesleğimiz için tehlike, gruplara bölünmek ve birbirimizi yıpratarak kapıları kapatmaktır. Biz bir grup hedefinde değiliz. <strong>Bütünlemeye ve bütünleşmeye çalışmaktır hedefimiz.</strong></p>
+
+        <p>Dişhekimliğinin geçmiş ve güncel her sorununu biliyor, yakıcı bir şekilde hissediyoruz. Bunları çözebilecek kadro ve enerjimizle eksiklikleri gidermeye ve mesleğimize nefes aldıracak projelerle adayız.</p>
+
+        <p><strong>Kamunun özelden hizmet alımı projesinin temelini atan ekibin bir parçasıyız.</strong> Kurumsal hafızamızla deneme-yanılmalarla zaman kaybetmeyecek, bu tecrübeyi genç yönetici adaylarımıza aktaracak durumdayız.</p>
+
+        <p>Gelişen teknolojinin dişhekimliği alanındaki uygulamalarını meslektaşlarımıza ücretsiz ulaştıracağız. Yeni mezun dişhekimlerinin eğitim çalışmalarını gruplar üzerinden değil, odamızın kurumsal yapısını güçlendirerek yapacağız.</p>
+
+        <p>Meslek örgütümüz olan Mersin Dişhekimleri Odası ve Türk Dişhekimleri Birliği’nin bugünlere gelmesinde emeği geçen büyüklerimize saygı duyarak, onların inşa ettiği yapı üzerinde tepinmeyeceğiz. Onların tecrübelerini genç yöneticilere aktarması için imkânlar sağlayacağız.</p>
+
+        <p><strong>Bize “tuzu kurular” diyorlar. Evet, tuzumuz kuru. Hiçbir beklentimiz, hiçbir çıkar ve mevki hesabımız yok.</strong> Bu yola sadece mesleğimize borcumuzu ödemek için çıktık.</p>
+
+        <p>Odağımız sonuç değildir; bu yolda ufak da olsa çaba göstermenin huzurudur aradığımız. Bugün ya da yarın, ama elbet bir gün, bu çabanın ne olduğu herkes tarafından anlaşılacaktır.</p>
+      </div>
+
+      <div class="manifesto-sig">Bir Olmak Mümkün Listesi — Mersin Dişhekimleri Odası</div>
+    </div>
+  </div>
+</section>
+
+<!-- KATIL -->
+<section id="katil" class="join">
+  <div class="container">
+    <div class="section-head">
+      <div class="section-eyebrow">Yanımızda Dur</div>
+      <h2 class="section-title">Bu yolu birlikte yürüyelim</h2>
+      <p class="section-sub">
+        Formu doldur. Kampanyanın bir parçası ol. Sahada, sosyal medyada ya da sandıkta —
+        katkın ne ölçüde olursa olsun, birliğimize yazılıyor.
+      </p>
+    </div>
+
+    <form class="join-form" onsubmit="event.preventDefault(); document.getElementById('successMsg').classList.add('show');">
+      <div class="form-row">
+        <label for="adsoyad">Ad Soyad</label>
+        <input id="adsoyad" type="text" placeholder="Dr. ..." required>
+      </div>
+      <div class="form-row">
+        <label for="email">E-posta</label>
+        <input id="email" type="email" placeholder="ornek@mail.com" required>
+      </div>
+      <div class="form-row">
+        <label for="tel">Telefon (isteğe bağlı)</label>
+        <input id="tel" type="tel" placeholder="+90 ...">
+      </div>
+      <div class="form-row">
+        <label for="ilgi">Nasıl katkı sunmak istersin?</label>
+        <select id="ilgi">
+          <option>Oy vereceğim, haberdar olmak istiyorum</option>
+          <option>Kliniğimde afiş, broşür bulundurabilirim</option>
+          <option>Yüz yüze kampanyaya destek olmak istiyorum</option>
+          <option>Sosyal medyada paylaşım yapabilirim</option>
+          <option>Mali katkı sağlamak istiyorum</option>
+          <option>Diğer</option>
+        </select>
+      </div>
+      <div class="form-row">
+        <label for="not">Kısa mesaj (isteğe bağlı)</label>
+        <textarea id="not" placeholder="Eklemek istediğiniz bir şey var mı?"></textarea>
+      </div>
+      <div class="form-row checkbox-row">
+        <input type="checkbox" id="kvkk" required>
+        <label for="kvkk" style="color:rgba(245,239,224,0.75);font-size:13.5px;letter-spacing:0">
+          Kişisel verilerimin kampanya iletişimi kapsamında işlenmesine izin veriyorum.
+        </label>
+      </div>
+      <button type="submit" class="form-submit">Gönder</button>
+    </form>
+    <div id="successMsg" class="form-success">
+      Teşekkür ederiz. <br>
+      Kayıt aldık — kampanyadan ilk buluşma duyurusu ile sana dönüş yapacağız.<br><br>
+      <em style="color:var(--gold-bright);font-family:'Playfair Display',serif;">Bir olmak mümkün.</em>
+    </div>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer>
+  <div class="container">
+    <div class="footer-grid">
+      <div class="footer-brand">
+        <div class="brand">
+          <div class="brand-mark">1</div>
+          <div>
+            <div class="brand-text">Bir Olmak Mümkün</div>
+            <div class="brand-sub">Mersin Dişhekimleri Odası</div>
+          </div>
+        </div>
+        <p>
+          Mersin Dişhekimleri Odası’nı bir grubun değil, tüm üyelerinin evi haline getirmek için
+          bir araya gelmiş hekimlerin listesi. Sözümüz net: Bir olmak mümkün.
+        </p>
+      </div>
+      <div class="footer-col">
+        <h4>Kampanya</h4>
+        <a href="#degerler">Değerlerimiz</a>
+        <a href="#projeler">Projelerimiz</a>
+        <a href="#filmler">Filmlerimiz</a>
+        <a href="#manifesto">Manifestomuz</a>
+      </div>
+      <div class="footer-col">
+        <h4>İletişim</h4>
+        <a href="mailto:iletisim@birolmakmumkun.org">iletisim@birolmakmumkun.org</a>
+        <span>Mersin / Türkiye</span>
+        <a href="#">Instagram</a>
+        <a href="#">Facebook</a>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <span>© 2026 Bir Olmak Mümkün Listesi · Seçim: 10 Mayıs 2026 Pazar</span>
+      <em>Bir olmak mümkün.</em>
+    </div>
+  </div>
+</footer>
+
+<script>
+// Countdown to 10 Mayıs 2026 Pazar — sandık açılışı 08:00
+function updateCountdown() {
+  const target = new Date('2026-05-10T08:00:00+03:00').getTime();
+  const now = Date.now();
+  const diff = target - now;
+  if (diff <= 0) {
+    const bar = document.getElementById('countdownBar');
+    if (bar) bar.innerHTML = '<span class="count-label" style="border:none;font-weight:600;color:var(--gold-bright)">Bugün sandık günü — yarın değil, bugün.</span>';
+    return;
+  }
+  const d = Math.floor(diff / (1000*60*60*24));
+  const h = Math.floor((diff % (1000*60*60*24)) / (1000*60*60));
+  const m = Math.floor((diff % (1000*60*60)) / (1000*60));
+  const set = (id, v) => { const el = document.getElementById(id); if (el) el.textContent = v; };
+  set('cdDays', d);
+  set('cdHours', h);
+  set('cdMins', m);
+}
+updateCountdown();
+setInterval(updateCountdown, 60000);
+
+// Soft reveal on scroll
+document.addEventListener('DOMContentLoaded', () => {
+  const els = document.querySelectorAll('.pillar,.project-card,.film-card');
+  const obs = new IntersectionObserver((entries) => {
+    entries.forEach(e => {
+      if (e.isIntersecting) {
+        e.target.style.opacity = 1;
+        e.target.style.transform = 'translateY(0)';
+      }
+    });
+  }, { threshold: 0.12 });
+  els.forEach(el => {
+    el.style.opacity = 0;
+    el.style.transform = 'translateY(18px)';
+    el.style.transition = 'all 0.6s cubic-bezier(0.2, 0.8, 0.2, 1)';
+    obs.observe(el);
+  });
+});
+</script>
+
+</body>
+</html>
