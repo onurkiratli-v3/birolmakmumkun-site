@@ -1,0 +1,653 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Adaylarımız · Bir Olmak Mümkün</title>
+<meta name="description" content="Mersin Dişhekimleri Odası seçimi · Bir Olmak Mümkün Listesi adayları: Yönetim Kurulu, TDB Delegeleri, Denetleme ve Disiplin Kurulu.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500;700;900&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+<style>
+:root{
+  --navy:#0B3D5C;
+  --navy-dark:#082B42;
+  --gold:#C9A961;
+  --gold-bright:#E0C084;
+  --cream:#F5EFE0;
+  --cream-soft:#FAF6EC;
+  --text:#1a1a1a;
+  --text-soft:#4a4a4a;
+  --text-mute:#888;
+  --white:#ffffff;
+}
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth}
+body{
+  font-family:'Inter',system-ui,-apple-system,sans-serif;
+  color:var(--text);
+  line-height:1.65;
+  background:var(--cream-soft);
+  -webkit-font-smoothing:antialiased;
+}
+h1,h2,h3,h4{font-family:'Playfair Display',serif;font-weight:700;line-height:1.15;color:var(--navy)}
+a{color:inherit;text-decoration:none}
+img{max-width:100%;display:block}
+.container{max-width:1180px;margin:0 auto;padding:0 24px}
+
+/* ===== NAV ===== */
+nav{
+  position:fixed;top:0;left:0;right:0;z-index:100;
+  background:rgba(11,61,92,0.96);
+  backdrop-filter:blur(8px);
+  border-bottom:1px solid rgba(201,169,97,0.25);
+}
+.nav-wrap{
+  display:flex;align-items:center;justify-content:space-between;
+  padding:14px 24px;max-width:1180px;margin:0 auto;
+}
+.brand{display:flex;align-items:center;gap:12px;color:var(--cream)}
+.brand-mark{
+  width:40px;height:40px;border-radius:50%;
+  background:linear-gradient(135deg,var(--gold) 0%,var(--gold-bright) 100%);
+  display:flex;align-items:center;justify-content:center;
+  color:var(--navy-dark);font-family:'Playfair Display',serif;font-weight:900;font-size:22px;
+  box-shadow:0 2px 8px rgba(0,0,0,0.2);
+}
+.brand-text{font-family:'Playfair Display',serif;font-weight:700;font-size:18px;letter-spacing:0.5px}
+.nav-links{display:flex;gap:28px;align-items:center}
+.nav-links a{color:var(--cream);font-size:14px;font-weight:500;opacity:0.85;transition:opacity .2s}
+.nav-links a:hover{opacity:1;color:var(--gold-bright)}
+.cta{
+  background:var(--gold);color:var(--navy-dark)!important;
+  padding:10px 20px;border-radius:999px;font-weight:600;
+  transition:all .25s;
+}
+.cta:hover{background:var(--gold-bright);transform:translateY(-1px)}
+.nav-toggle{display:none;background:none;border:none;color:var(--cream);font-size:24px;cursor:pointer}
+
+/* ===== HERO ===== */
+.hero{
+  background:
+    radial-gradient(ellipse at top right,rgba(201,169,97,0.18) 0%,transparent 55%),
+    radial-gradient(ellipse at bottom left,rgba(201,169,97,0.1) 0%,transparent 50%),
+    linear-gradient(165deg,var(--navy) 0%,var(--navy-dark) 100%);
+  color:var(--cream);
+  position:relative;overflow:hidden;
+  padding:160px 0 90px;
+  text-align:center;
+}
+.hero::before{
+  content:"";position:absolute;inset:0;
+  background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='60' height='60' viewBox='0 0 60 60'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cg fill='%23C9A961' fill-opacity='0.04'%3E%3Cpath d='M36 34v-4h-2v4h-4v2h4v4h2v-4h4v-2h-4zm0-30V0h-2v4h-4v2h4v4h2V6h4V4h-4zM6 34v-4H4v4H0v2h4v4h2v-4h4v-2H6zM6 4V0H4v4H0v2h4v4h2V6h4V4H6z'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E");
+  opacity:0.6;
+}
+.hero-content{position:relative;z-index:2;max-width:820px;margin:0 auto}
+.hero-eyebrow{
+  display:inline-block;
+  padding:6px 16px;
+  background:rgba(201,169,97,0.12);
+  border:1px solid rgba(201,169,97,0.35);
+  border-radius:999px;
+  color:var(--gold-bright);
+  font-size:12px;letter-spacing:2px;text-transform:uppercase;font-weight:600;
+  margin-bottom:28px;
+}
+.hero h1{
+  color:var(--cream);
+  font-size:clamp(44px,7vw,86px);
+  font-weight:900;line-height:1;
+  letter-spacing:-1px;
+  margin-bottom:24px;
+}
+.hero h1 span{color:var(--gold);font-style:italic}
+.hero-lead{
+  font-size:clamp(16px,1.8vw,19px);
+  line-height:1.7;color:rgba(245,239,224,0.85);font-weight:300;
+  max-width:640px;margin:0 auto;
+}
+
+/* ===== SECTIONS ===== */
+section.body-section{padding:110px 0}
+.section-head{max-width:760px;margin:0 auto 64px;text-align:center}
+.section-eyebrow{
+  display:inline-block;font-size:12px;letter-spacing:2.5px;text-transform:uppercase;
+  color:var(--gold);font-weight:600;margin-bottom:14px;
+}
+.section-title{font-size:clamp(32px,4.5vw,46px);margin-bottom:16px;letter-spacing:-0.5px}
+.section-sub{font-size:17px;color:var(--text-soft);line-height:1.65}
+
+/* ===== ALTERNATE BACKGROUNDS ===== */
+.bg-cream{background:var(--cream-soft)}
+.bg-cream-warm{background:linear-gradient(180deg,var(--cream-soft) 0%,var(--cream) 100%)}
+.bg-navy{background:var(--navy);color:var(--cream);position:relative;overflow:hidden}
+.bg-navy::before{
+  content:"";position:absolute;inset:0;
+  background:radial-gradient(ellipse at center,rgba(201,169,97,0.08) 0%,transparent 60%);
+}
+.bg-navy .container{position:relative;z-index:2}
+.bg-navy .section-title{color:var(--cream)}
+.bg-navy .section-sub{color:rgba(245,239,224,0.75)}
+.bg-navy .section-eyebrow{color:var(--gold-bright)}
+
+/* ===== ADAY GRID ===== */
+.aday-grid{
+  display:flex;
+  flex-wrap:wrap;
+  justify-content:center;
+  gap:28px;
+}
+.aday-grid > .aday-card{
+  flex:0 0 calc((100% - 28px * 3) / 4);
+  max-width:calc((100% - 28px * 3) / 4);
+}
+.aday-grid.cols-3 > .aday-card{
+  flex:0 0 calc((100% - 28px * 2) / 3);
+  max-width:calc((100% - 28px * 2) / 3);
+}
+
+.aday-card{
+  background:var(--white);
+  border-radius:18px;
+  border:1px solid rgba(201,169,97,0.18);
+  box-shadow:0 2px 12px rgba(11,61,92,0.06);
+  text-align:center;
+  padding:30px 22px 26px;
+  transition:all .3s cubic-bezier(0.2, 0.8, 0.2, 1);
+  position:relative;overflow:hidden;
+}
+.aday-card::before{
+  content:"";position:absolute;top:0;left:0;right:0;height:3px;
+  background:linear-gradient(90deg,var(--gold),var(--gold-bright));
+  transform:scaleX(0);transform-origin:left;
+  transition:transform .35s ease;
+}
+.aday-card:hover{
+  transform:translateY(-4px);
+  box-shadow:0 14px 32px rgba(11,61,92,0.12);
+  border-color:rgba(201,169,97,0.45);
+}
+.aday-card:hover::before{transform:scaleX(1)}
+
+.bg-navy .aday-card{
+  background:rgba(245,239,224,0.04);
+  border:1px solid rgba(201,169,97,0.22);
+  box-shadow:none;
+}
+.bg-navy .aday-card:hover{
+  background:rgba(245,239,224,0.07);
+  border-color:var(--gold);
+  box-shadow:0 14px 32px rgba(0,0,0,0.25);
+}
+
+.photo{
+  width:140px;height:140px;
+  margin:0 auto 18px;
+  border-radius:50%;
+  background:linear-gradient(135deg,var(--cream) 0%,var(--cream-soft) 100%);
+  border:3px solid var(--gold);
+  display:flex;align-items:center;justify-content:center;
+  color:var(--gold);font-family:'Playfair Display',serif;font-style:italic;font-size:13px;
+  overflow:hidden;
+  box-shadow:0 4px 14px rgba(11,61,92,0.1);
+  position:relative;
+}
+.bg-navy .photo{
+  background:linear-gradient(135deg,rgba(245,239,224,0.08) 0%,rgba(245,239,224,0.02) 100%);
+  color:rgba(245,239,224,0.4);
+  box-shadow:0 4px 14px rgba(0,0,0,0.3);
+}
+.photo img{width:100%;height:100%;object-fit:cover;object-position:center 18%;display:block}
+
+.aday-title{
+  font-size:11px;letter-spacing:2px;text-transform:uppercase;
+  color:var(--gold);font-weight:600;margin-bottom:6px;
+}
+.bg-navy .aday-title{color:var(--gold-bright)}
+
+.aday-name{
+  font-family:'Playfair Display',serif;font-weight:700;
+  font-size:19px;color:var(--navy);
+  letter-spacing:-0.2px;line-height:1.25;
+}
+.bg-navy .aday-name{color:var(--cream)}
+
+/* Başkan Adayı (highlighted) */
+.president-wrap{
+  max-width:340px;margin:0 auto 56px;
+  text-align:center;position:relative;
+}
+.president-wrap::before,
+.president-wrap::after{
+  content:"";position:absolute;top:50%;width:25%;height:1px;
+  background:linear-gradient(90deg,transparent,rgba(201,169,97,0.5),transparent);
+}
+.president-wrap::before{left:-30%}
+.president-wrap::after{right:-30%}
+
+.president-card{
+  background:var(--white);
+  border-radius:22px;
+  border:2px solid var(--gold);
+  padding:42px 32px 32px;
+  position:relative;
+  box-shadow:0 12px 36px rgba(11,61,92,0.12);
+}
+.president-card::before{
+  content:"";position:absolute;top:-1px;left:-1px;right:-1px;height:6px;
+  background:linear-gradient(90deg,var(--gold),var(--gold-bright),var(--gold));
+  border-radius:22px 22px 0 0;
+}
+.president-badge{
+  display:inline-block;
+  padding:5px 14px;
+  background:var(--navy);
+  color:var(--gold-bright);
+  font-size:10px;letter-spacing:2.5px;text-transform:uppercase;font-weight:700;
+  border-radius:999px;
+  margin-bottom:18px;
+}
+.president-card .photo{
+  width:180px;height:180px;
+  border:4px solid var(--gold);
+  margin-bottom:22px;
+}
+.president-card .aday-title{font-size:12px;margin-bottom:8px}
+.president-card .aday-name{font-size:26px;margin-bottom:6px}
+.president-role{
+  font-family:'Playfair Display',serif;font-style:italic;
+  color:var(--gold);font-size:15px;margin-top:8px;
+}
+
+/* Section divider */
+.section-divider{
+  display:flex;align-items:center;justify-content:center;
+  gap:14px;margin:0 auto 50px;max-width:280px;
+  color:var(--gold);
+}
+.section-divider .line{flex:1;height:1px;background:rgba(201,169,97,0.4)}
+.section-divider .dot{
+  width:8px;height:8px;border-radius:50%;background:var(--gold);
+}
+
+/* ===== FOOTER ===== */
+footer{
+  background:var(--navy-dark);color:rgba(245,239,224,0.75);
+  padding:64px 0 28px;
+}
+.footer-grid{
+  display:grid;grid-template-columns:2fr 1fr 1fr;gap:42px;
+  padding-bottom:40px;border-bottom:1px solid rgba(201,169,97,0.15);
+}
+.footer-brand .brand-text{font-size:20px;color:var(--cream)}
+.footer-brand p{margin-top:14px;font-size:14.5px;line-height:1.6;max-width:360px}
+.footer-col h4{
+  color:var(--gold-bright);font-family:'Inter',sans-serif;font-weight:600;
+  font-size:13px;text-transform:uppercase;letter-spacing:1.5px;
+  margin-bottom:16px;
+}
+.footer-col a,.footer-col span{
+  display:block;color:rgba(245,239,224,0.7);font-size:14.5px;
+  margin-bottom:10px;transition:color .2s;
+}
+.footer-col a:hover{color:var(--gold-bright)}
+.footer-bottom{
+  margin-top:24px;display:flex;justify-content:space-between;
+  font-size:13px;color:rgba(245,239,224,0.5);flex-wrap:wrap;gap:12px;
+}
+.footer-bottom em{font-style:italic;color:var(--gold-bright)}
+
+/* ===== RESPONSIVE ===== */
+@media (max-width: 980px){
+  .aday-grid > .aday-card{
+    flex:0 0 calc((100% - 28px * 2) / 3);
+    max-width:calc((100% - 28px * 2) / 3);
+  }
+}
+@media (max-width: 720px){
+  .aday-grid > .aday-card,
+  .aday-grid.cols-3 > .aday-card{
+    flex:0 0 calc((100% - 28px) / 2);
+    max-width:calc((100% - 28px) / 2);
+  }
+  .footer-grid{grid-template-columns:1fr;gap:32px}
+  .nav-links{display:none}
+  .nav-toggle{display:block}
+  .nav-links.open{
+    display:flex;flex-direction:column;gap:16px;
+    position:absolute;top:100%;left:0;right:0;
+    background:var(--navy-dark);padding:24px;
+    border-bottom:1px solid rgba(201,169,97,0.2);
+  }
+  section.body-section{padding:80px 0}
+  .hero{padding:130px 0 70px}
+  .president-wrap::before,.president-wrap::after{display:none}
+}
+@media (max-width: 460px){
+  .aday-grid > .aday-card,
+  .aday-grid.cols-3 > .aday-card{
+    flex:0 0 100%;
+    max-width:280px;
+  }
+  .photo{width:160px;height:160px}
+}
+
+@media print {
+  body{background:#fff}
+  nav,footer{display:none}
+  section.body-section{padding:30px 0;page-break-inside:avoid}
+  .hero{padding:40px 0;color:var(--navy)!important;background:var(--cream-soft)!important}
+  .hero h1{color:var(--navy)!important}
+  .hero-lead,.hero-eyebrow{color:var(--text-soft)!important}
+  .bg-navy{background:var(--cream-soft)!important;color:var(--text)!important}
+  .bg-navy .section-title{color:var(--navy)!important}
+  .bg-navy .aday-card{background:var(--white)!important;border:1px solid rgba(201,169,97,0.3)!important}
+  .bg-navy .aday-name{color:var(--navy)!important}
+  .bg-navy .aday-title{color:var(--gold)!important}
+}
+</style>
+</head>
+<body>
+
+<!-- NAV -->
+<nav>
+  <div class="nav-wrap">
+    <a href="index.html" class="brand">
+      <div class="brand-mark">1</div>
+      <div>
+        <div class="brand-text">Bir Olmak Mümkün</div>
+      </div>
+    </a>
+    <div class="nav-links" id="navLinks">
+      <a href="index.html#degerler">Değerlerimiz</a>
+      <a href="index.html#projeler">Projeler</a>
+      <a href="aday-listesi.html" style="color:var(--gold-bright)">Adaylar</a>
+      <a href="index.html#manifesto">Manifesto</a>
+      <a href="index.html#katil" class="cta">Yanımızda Dur</a>
+    </div>
+    <button class="nav-toggle" onclick="document.getElementById('navLinks').classList.toggle('open')">☰</button>
+  </div>
+</nav>
+
+<!-- HERO -->
+<section class="hero">
+  <div class="container hero-content">
+    <div class="hero-eyebrow">10 Mayıs 2026 · Mersin Dişhekimleri Odası</div>
+    <h1><span>Bu yola birlikte çıktık.</span></h1>
+    <p class="hero-lead">
+      Mersin Dişhekimleri Odası'nı bir grup değil, birlikte yönetelim. Deneyimle ve
+      birlikte yürüme arzusuyla bir araya gelmiş hekimlerin listesi. Tanıyın, sorun,
+      yanımızda durun, birlikte başaralım.
+    </p>
+  </div>
+</section>
+
+<!-- ========== YÖNETİM KURULU ========== -->
+<section class="body-section bg-cream-warm">
+  <div class="container">
+    <div class="section-head">
+      <h2 class="section-title">Yönetim Kurulu Adayları</h2>
+      <p class="section-sub">
+        Açık kapı, ulaşılabilir ve hesap verebilir bir yönetim için aday olduk.
+        Önce başkan adayımız, ardından ekibimiz.
+      </p>
+    </div>
+
+    <!-- Başkan Adayı -->
+    <div class="president-wrap">
+      <div class="president-card">
+        <div class="president-badge">Başkan Adayı</div>
+        <div class="photo"><img src="ekrem-duran.png" alt="Ekrem Duran"></div>
+        <div class="aday-title">Dr. Dişhekimi</div>
+        <div class="aday-name">Ekrem Duran</div>
+      </div>
+    </div>
+
+    <div class="section-divider">
+      <span class="line"></span><span class="dot"></span><span class="line"></span>
+    </div>
+
+    <!-- Üyeler -->
+    <div class="aday-grid">
+      <div class="aday-card">
+        <div class="photo"><img src="yesim-ozturk.png" alt="Yeşim Öztürk"></div>
+        <div class="aday-title">Dr. Dişhekimi</div>
+        <div class="aday-name">Yeşim Öztürk</div>
+      </div>
+      <div class="aday-card">
+        <div class="photo"><img src="ata-sentut.png" alt="Ata Şentut"></div>
+        <div class="aday-title">Dişhekimi</div>
+        <div class="aday-name">Ata Şentut</div>
+      </div>
+      <div class="aday-card">
+        <div class="photo"><img src="selda-esin.png" alt="Selda Esin"></div>
+        <div class="aday-title">Dişhekimi</div>
+        <div class="aday-name">Selda Esin</div>
+      </div>
+      <div class="aday-card">
+        <div class="photo"><img src="ali-sahutoglu.png" alt="Ali Şahutoğlu"></div>
+        <div class="aday-title">Dişhekimi</div>
+        <div class="aday-name">Ali Şahutoğlu</div>
+      </div>
+      <div class="aday-card">
+        <div class="photo"><img src="mehmet-baris-harma.png" alt="Mehmet Barış Harma"></div>
+        <div class="aday-title">Dişhekimi</div>
+        <div class="aday-name">Mehmet Barış Harma</div>
+      </div>
+      <div class="aday-card">
+        <div class="photo"><img src="egemen-bahceci.png" alt="Egemen Bahçeci"></div>
+        <div class="aday-title">Dişhekimi</div>
+        <div class="aday-name">Egemen Bahçeci</div>
+      </div>
+      <div class="aday-card">
+        <div class="photo"><img src="ece-aydin-dal.png" alt="Ece Aydın Dal"></div>
+        <div class="aday-title">Dişhekimi</div>
+        <div class="aday-name">Ece Aydın Dal</div>
+      </div>
+      <div class="aday-card">
+        <div class="photo"><img src="cihan-cakmak.png" alt="Cihan Çakmak"></div>
+        <div class="aday-title">Dişhekimi</div>
+        <div class="aday-name">Cihan Çakmak</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ========== TDB DELEGE ========== -->
+<section class="body-section bg-navy">
+  <div class="container">
+    <div class="section-head">
+      <h2 class="section-title">TDB Delege Adayları</h2>
+      <p class="section-sub">
+        Türk Dişhekimleri Birliği'nde Mersin'i temsil edecek delege adaylarımız.
+        Kurumsal hafıza, ulusal düzeyde de yanımızda.
+      </p>
+    </div>
+
+    <div class="aday-grid">
+      <div class="aday-card">
+        <div class="photo"><img src="oguz-yilmaz.png" alt="Oğuz Yılmaz"></div>
+        <div class="aday-title">Dr. Dişhekimi</div>
+        <div class="aday-name">Oğuz Yılmaz</div>
+      </div>
+      <div class="aday-card">
+        <div class="photo"><img src="odul-erdem.png" alt="Ödül Erdem"></div>
+        <div class="aday-title">Dr. Dişhekimi</div>
+        <div class="aday-name">Ödül Erdem</div>
+      </div>
+      <div class="aday-card">
+        <div class="photo"><img src="oytun-manav.png" alt="Oytun Manav"></div>
+        <div class="aday-title">Dr. Dişhekimi</div>
+        <div class="aday-name">Oytun Manav</div>
+      </div>
+      <div class="aday-card">
+        <div class="photo"><img src="kemal-tuyguz.png" alt="Kemal Tüygüz"></div>
+        <div class="aday-title">Dişhekimi</div>
+        <div class="aday-name">Kemal Tüygüz</div>
+      </div>
+      <div class="aday-card">
+        <div class="photo"><img src="tuncer-taskin.png" alt="Tuncer Taşkın"></div>
+        <div class="aday-title">Dişhekimi</div>
+        <div class="aday-name">Tuncer Taşkın</div>
+      </div>
+      <div class="aday-card">
+        <div class="photo"><img src="salim-bayram.png" alt="Salim Bayram"></div>
+        <div class="aday-title">Dişhekimi</div>
+        <div class="aday-name">Salim Bayram</div>
+      </div>
+      <div class="aday-card">
+        <div class="photo"><img src="suleyman-yaldiz.png" alt="Süleyman Yaldız"></div>
+        <div class="aday-title">Dişhekimi</div>
+        <div class="aday-name">Süleyman Yaldız</div>
+      </div>
+      <div class="aday-card">
+        <div class="photo"><img src="nilufer-karaselcuk.png" alt="Nilüfer Karaselçuk"></div>
+        <div class="aday-title">Dişhekimi</div>
+        <div class="aday-name">Nilüfer Karaselçuk</div>
+      </div>
+      <div class="aday-card">
+        <div class="photo"><img src="mehmet-ali-yalcin.png" alt="Mehmet Ali Yalçın"></div>
+        <div class="aday-title">Dişhekimi</div>
+        <div class="aday-name">Mehmet Ali Yalçın</div>
+      </div>
+      <div class="aday-card">
+        <div class="photo"><img src="naciye-gulec-gok.png" alt="Naciye Güleç Gök"></div>
+        <div class="aday-title">Dişhekimi</div>
+        <div class="aday-name">Naciye Güleç Gök</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ========== DENETLEME KURULU ========== -->
+<section class="body-section bg-cream">
+  <div class="container">
+    <div class="section-head">
+      <h2 class="section-title">Denetleme Kurulu Adayları</h2>
+      <p class="section-sub">
+        Şeffaflık, güvenin önsözüdür. Üç ayda bir paylaşacağımız mali raporun
+        kalemine sahip çıkacak adaylarımız.
+      </p>
+    </div>
+
+    <div class="aday-grid cols-3">
+      <div class="aday-card">
+        <div class="photo"><img src="ahter-atakan.png" alt="Ahter Atakan"></div>
+        <div class="aday-title">Dr. Dişhekimi</div>
+        <div class="aday-name">Ahter Atakan</div>
+      </div>
+      <div class="aday-card">
+        <div class="photo"><img src="ufuk-turgut.png" alt="Ufuk Turgut"></div>
+        <div class="aday-title">Dişhekimi</div>
+        <div class="aday-name">Ufuk Turgut</div>
+      </div>
+      <div class="aday-card">
+        <div class="photo"><img src="kurtulus-ozmen.png" alt="Kurtuluş Özmen"></div>
+        <div class="aday-title">Dişhekimi</div>
+        <div class="aday-name">Kurtuluş Özmen</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ========== DİSİPLİN KURULU ========== -->
+<section class="body-section bg-navy">
+  <div class="container">
+    <div class="section-head">
+      <h2 class="section-title">Disiplin Kurulu Adayları</h2>
+      <p class="section-sub">
+        Mesleğimizin onuruna sahip çıkacak, hakkaniyetle değerlendirme yapacak adaylarımız.
+      </p>
+    </div>
+
+    <div class="aday-grid">
+      <div class="aday-card">
+        <div class="photo"><img src="bulent-saglam.png" alt="Bülent Sağlam"></div>
+        <div class="aday-title">Dişhekimi</div>
+        <div class="aday-name">Bülent Sağlam</div>
+      </div>
+      <div class="aday-card">
+        <div class="photo"><img src="fehmi-ergin.png" alt="Fehmi Ergin"></div>
+        <div class="aday-title">Dişhekimi</div>
+        <div class="aday-name">Fehmi Ergin</div>
+      </div>
+      <div class="aday-card">
+        <div class="photo"><img src="ali-cakmak.png" alt="Ali Çakmak"></div>
+        <div class="aday-title">Dişhekimi</div>
+        <div class="aday-name">Ali Çakmak</div>
+      </div>
+      <div class="aday-card">
+        <div class="photo"><img src="haci-donat.png" alt="Hacı Donat"></div>
+        <div class="aday-title">Dişhekimi</div>
+        <div class="aday-name">Hacı Donat</div>
+      </div>
+      <div class="aday-card">
+        <div class="photo"><img src="zekiye-kahveci.png" alt="Zekiye Kahveci"></div>
+        <div class="aday-title">Dişhekimi</div>
+        <div class="aday-name">Zekiye Kahveci</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer>
+  <div class="container">
+    <div class="footer-grid">
+      <div class="footer-brand">
+        <div class="brand">
+          <div class="brand-mark">1</div>
+          <div>
+            <div class="brand-text">Bir Olmak Mümkün</div>
+          </div>
+        </div>
+        <p>
+          Mersin Dişhekimleri Odası'nı bir grubun değil, tüm üyelerinin evi haline getirmek için
+          bir araya gelmiş hekimlerin listesi. Sözümüz net: Bir olmak mümkün.
+        </p>
+      </div>
+      <div class="footer-col">
+        <h4>Kampanya</h4>
+        <a href="index.html#degerler">Değerlerimiz</a>
+        <a href="index.html#projeler">Projelerimiz</a>
+        <a href="aday-listesi.html">Adaylarımız</a>
+        <a href="index.html#manifesto">Manifestomuz</a>
+      </div>
+      <div class="footer-col">
+        <h4>İletişim</h4>
+        <a href="mailto:iletisim@birolmakmumkun.org">iletisim@birolmakmumkun.org</a>
+        <span>Mersin / Türkiye</span>
+        <a href="#">Instagram</a>
+        <a href="#">Facebook</a>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <span>© 2026 Bir Olmak Mümkün Listesi · Seçim: 10 Mayıs 2026 Pazar</span>
+      <em>Bir olmak mümkün.</em>
+    </div>
+  </div>
+</footer>
+
+<script>
+// Soft reveal on scroll
+document.addEventListener('DOMContentLoaded', () => {
+  const els = document.querySelectorAll('.aday-card,.president-card');
+  const obs = new IntersectionObserver((entries) => {
+    entries.forEach(e => {
+      if (e.isIntersecting) {
+        e.target.style.opacity = 1;
+        e.target.style.transform = 'translateY(0)';
+      }
+    });
+  }, { threshold: 0.12 });
+  els.forEach(el => {
+    el.style.opacity = 0;
+    el.style.transform = 'translateY(18px)';
+    el.style.transition = 'all 0.6s cubic-bezier(0.2, 0.8, 0.2, 1)';
+    obs.observe(el);
+  });
+});
+</script>
+
+</body>
+</html>
