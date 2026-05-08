@@ -578,7 +578,7 @@ footer{
       <div class="section-eyebrow">Kampanya Filmleri</div>
       <h2 class="section-title">Sözümüzü anlatıyoruz</h2>
       <p class="section-sub">
-        Dört kısa film, bir yolculuk. Kapıyı açan manifestomuzdan, sandığa yaptığımız son çağrıya.
+        Üç kısa film, bir yolculuk. Kapıyı açan manifestomuzdan somut projelerimize.
       </p>
     </div>
 
@@ -607,9 +607,9 @@ footer{
         </div>
       </div>
 
-      <div class="film-card coming-soon">
+      <div class="film-card ready" onclick="openVideo('film3')">
         <div class="film-thumb">
-          <div class="film-meta yakinda">Yakında</div>
+          <div class="film-meta">49 sn</div>
           <div class="play-icon">▶</div>
         </div>
         <div class="film-body">
@@ -619,17 +619,6 @@ footer{
         </div>
       </div>
 
-      <div class="film-card coming-soon">
-        <div class="film-thumb">
-          <div class="film-meta yakinda">Yakında</div>
-          <div class="play-icon">▶</div>
-        </div>
-        <div class="film-body">
-          <div class="film-label">Film 04 · Çağrı</div>
-          <h3>Sandık</h3>
-          <p>Klinik kapanıyor, ışıklar sönüyor. Ama bir kez daha birlikte olmamız gereken gün yarın. Son çağrı.</p>
-        </div>
-      </div>
     </div>
   </div>
 </section>
@@ -804,7 +793,8 @@ document.addEventListener('DOMContentLoaded', () => {
 // Video modal
 const FILMS = {
   film1: { src: '/videos/film1-kapi.mp4',         title: 'Film 01 · Kapı' },
-  film2: { src: '/videos/film2-sessiz-emek.mp4',  title: 'Film 02 · Sessiz Emek' }
+  film2: { src: '/videos/film2-sessiz-emek.mp4',  title: 'Film 02 · Sessiz Emek' },
+  film3: { src: '/videos/film3-soz-degil-is.mp4', title: 'Film 03 · Söz Değil, İş' }
 };
 function openVideo(key){
   const f = FILMS[key]; if(!f) return;
